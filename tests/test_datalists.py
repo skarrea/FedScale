@@ -52,9 +52,10 @@ class DatalistTests(unittest.TestCase):
         self.assertEqual(json.loads(paths[0].read_text()), datalists[0])
 
     def test_optional_masks_and_custom_sequence_order(self):
-        sample = self.create(sequence_ids=[2, 0, 1], prostate_pred_dir="preds",
+        sample = self.create(sequence_ids=[2, 0, 1], prostate_dir="whole_gland", prostate_pred_dir="preds",
                              prostate_pred_suffix="", zones_dir="zones")[0]["training"][0]
         self.assertEqual(sample["image"][0], "imagesTR/10000_1000000_0002.nii.gz")
+        self.assertEqual(sample["prostate"], "whole_gland/10000_1000000.nii.gz")
         self.assertEqual(sample["prostate_pred"], "preds/10000_1000000.nii.gz")
         self.assertEqual(sample["zones"], "zones/10000_1000000.nii.gz")
 
@@ -79,23 +80,29 @@ class DatalistTests(unittest.TestCase):
 
     def test_file_checks_include_negative_case_and_optional_masks(self):
         self.set_splits([{"train": ["10000_1000000"], "val": []}])
-        sample = self.create(prostate_pred_dir="preds", zones_dir="zones")[0]["training"][0]
-        for name in sample["image"] + [sample["prostate_pred"], sample["zones"]]:
+        mask_dirs = {"prostate_dir": "whole_gland", "prostate_pred_dir": "preds", "zones_dir": "zones"}
+        sample = self.create(**mask_dirs)[0]["training"][0]
+        for name in sample["image"] + [sample["prostate"], sample["prostate_pred"], sample["zones"]]:
             path = self.root / name
             path.parent.mkdir(parents=True, exist_ok=True)
             path.touch()
         with self.assertRaisesRegex(FileNotFoundError, "labelsTr/10000_1000000"):
             self.create(check_files=True, data_dir=self.root,
-                        prostate_pred_dir="preds", zones_dir="zones")
+                        **mask_dirs)
         label = self.root / sample["pca"]
         label.parent.mkdir(parents=True)
         label.touch()
         self.create(check_files=True, data_dir=self.root,
-                    prostate_pred_dir="preds", zones_dir="zones")
+                    **mask_dirs)
+        prostate = self.root / sample["prostate"]
+        prostate.unlink()
+        with self.assertRaisesRegex(FileNotFoundError, "whole_gland/10000_1000000"):
+            self.create(check_files=True, data_dir=self.root, **mask_dirs)
+        prostate.touch()
         (self.root / sample["zones"]).unlink()
         with self.assertRaisesRegex(FileNotFoundError, "zones/10000_1000000"):
             self.create(check_files=True, data_dir=self.root,
-                        prostate_pred_dir="preds", zones_dir="zones")
+                        **mask_dirs)
 
     def test_invalid_inputs_fail_with_context(self):
         for splits in ({"train": [], "val": []}, [], [{"train": []}],
@@ -120,11 +127,13 @@ class DatalistTests(unittest.TestCase):
             sys.executable, "-m", "shared_modules.datalists",
             "--splits", str(self.splits_path), "--cases-csv", str(self.csv_path),
             "--images-dir", "imagesTR", "--labels-dir", "labelsTr",
+            "--prostate-dir", "whole_gland",
             "--output-dir", str(output_dir),
         ], cwd=Path(__file__).resolve().parents[1], capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn("2 training, 1 validation", result.stdout)
-        self.assertEqual(json.loads((output_dir / "fold_0.json").read_text()), self.create()[0])
+        self.assertEqual(json.loads((output_dir / "fold_0.json").read_text()),
+                         self.create(prostate_dir="whole_gland")[0])
 
 
 if __name__ == "__main__":

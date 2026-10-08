@@ -76,12 +76,15 @@ python -m shared_modules.datalists \
     --cases-csv /path/to/cases.csv \
     --images-dir MyDataset/imagesTR \
     --labels-dir MyDataset/labelsTr \
+    --prostate-dir MyDataset/whole_gland \
     --output-dir json_datalists/MyDataset
 ```
 
 This writes `fold_0.json`, `fold_1.json`, etc., replacing existing files with
 those names. Each contains `training`, `validation`, and an empty `test` list.
 Patient entries contain `image` (three paths), `pca`, and `case_pca` if available.
+Providing `--prostate-dir` also adds `prostate`, the whole-gland segmentation
+path, with filenames `{patient_id}_{study_id}.nii.gz`.
 Images are named `{patient_id}_{study_id}_0000.nii.gz`, `_0001.nii.gz`, and
 `_0002.nii.gz`, in T2W, ADC, HBV order. Labels are named
 `{patient_id}_{study_id}.nii.gz`. Use `--sequence-ids` to change sequence numbers
@@ -110,6 +113,7 @@ from shared_modules.datalists import create_datalists, write_datalists
 
 datalists = create_datalists(
     "splits.json", "cases.csv", "MyDataset/imagesTR", "MyDataset/labelsTr",
+    prostate_dir="MyDataset/whole_gland",
     # zones_dir="MyDataset/zones",  # required for MTL
     # prostate_pred_dir="MyDataset/prostate_preds",  # for prostate-based cropping
 )
@@ -199,7 +203,6 @@ note={under review}
 ## Acknowledgements
 
 We acknowledge the authors of the publicly available datasets used in this study, whose contributions enable valuable research. Additionally, we extend our gratitude to the developers of [Swin UNETR](https://github.com/Project-MONAI/MONAI/blob/46a5272196a6c2590ca2589029eed8e4d56ff008/monai/networks/nets/swin_unetr.py#L47-L337), [U-Mamba](https://github.com/MIC-DKFZ/nnUNet), and the PI-CAI baseline models: [nnU-Net](https://github.com/DIAGNijmegen/picai_nnunet_semi_supervised_gc_algorithm), [U-Net](https://github.com/DIAGNijmegen/picai_unet_semi_supervised_gc_algorithm), and [nnDetection](https://github.com/DIAGNijmegen/picai_nndetection_semi_supervised_gc_algorithm) for making their valuable code publicly available.
-
 
 
 

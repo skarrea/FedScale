@@ -52,6 +52,7 @@ def create_datalists(
     labels_dir,
     *,
     sequence_ids=(0, 1, 2),
+    prostate_dir=None,
     prostate_pred_dir=None,
     prostate_pred_suffix="_pred",
     zones_dir=None,
@@ -65,8 +66,10 @@ def create_datalists(
     patient_id_study_id case IDs. Split order and CSV study order are retained.
     Duplicate cases and patients shared between train and val are rejected.
 
-    Image names are {case_id}_{sequence_id:04d}.nii.gz; cancer and zonal labels
-    are {case_id}.nii.gz. Prostate predictions default to {case_id}_pred.nii.gz.
+    Image names are {case_id}_{sequence_id:04d}.nii.gz; cancer, whole-gland
+    prostate, and zonal labels are {case_id}.nii.gz. prostate_dir adds the
+    whole-gland mask as prostate, independently of prostate_pred_dir.
+    Prostate predictions default to {case_id}_pred.nii.gz.
     sequence_ids are in model-channel order (default: T2W, ADC, HBV).
 
     Directory paths are stored as supplied, suitable for resolving relative
@@ -116,6 +119,8 @@ def create_datalists(
         }
         if "case_pca" in cases[case_id]:
             entry["case_pca"] = cases[case_id]["case_pca"]
+        if prostate_dir is not None:
+            entry["prostate"] = (Path(prostate_dir) / f"{case_id}.nii.gz").as_posix()
         if prostate_pred_dir is not None:
             entry["prostate_pred"] = (
                 Path(prostate_pred_dir) / f"{case_id}{prostate_pred_suffix}.nii.gz"
@@ -123,7 +128,7 @@ def create_datalists(
         if zones_dir is not None:
             entry["zones"] = (Path(zones_dir) / f"{case_id}.nii.gz").as_posix()
         if check_files:
-            paths = entry["image"] + [entry[k] for k in ("pca", "prostate_pred", "zones")
+            paths = entry["image"] + [entry[k] for k in ("pca", "prostate", "prostate_pred", "zones")
                                       if k in entry]
             for path in paths:
                 resolved = Path(data_dir) / path
@@ -176,6 +181,8 @@ def main():
     parser.add_argument("--output-dir", required=True, type=Path)
     parser.add_argument("--sequence-ids", nargs=3, type=int, default=(0, 1, 2),
                         help="Sequence numbers in T2W, ADC, HBV order (default: 0 1 2)")
+    parser.add_argument("--prostate-dir", type=Path,
+                        help="Whole-gland mask directory; filenames are {patient_id}_{study_id}.nii.gz")
     parser.add_argument("--prostate-pred-dir", type=Path)
     parser.add_argument("--prostate-pred-suffix", default="_pred",
                         help="Suffix before .nii.gz for prostate predictions (default: _pred)")
@@ -188,6 +195,7 @@ def main():
         datalists = create_datalists(
             args.splits, args.cases_csv, args.images_dir, args.labels_dir,
             sequence_ids=args.sequence_ids,
+            prostate_dir=args.prostate_dir,
             prostate_pred_dir=args.prostate_pred_dir,
             prostate_pred_suffix=args.prostate_pred_suffix,
             zones_dir=args.zones_dir,
