@@ -40,7 +40,8 @@ class DataModule(pl.LightningDataModule):
             )
 
     def train_dataloader(self):
-        return DataLoader(self.ds["training"], batch_size=self.batch_size, pin_memory=True, shuffle=True)
+        return DataLoader(self.ds["training"], batch_size=self.batch_size, pin_memory=True, shuffle=True, num_workers=4,
+            persistent_workers=True, prefetch_factor=2)
 
     def val_dataloader(self):
         return DataLoader(self.ds["validation"], batch_size=1, pin_memory=True)

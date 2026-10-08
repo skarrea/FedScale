@@ -1,7 +1,6 @@
 """Prepare a reproducible data-scale run and launch an existing trainer."""
 
 from __future__ import annotations
-
 import argparse
 import json
 import math
@@ -14,8 +13,10 @@ from typing import Any
 
 import yaml
 
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
 
-WORKSPACE = Path(os.environ.get("FEDSCALE_WORKSPACE", "/workspace"))
+WORKSPACE = Path(os.environ.get("FEDSCALE_WORKSPACE", "/workspace/FedScal-UMamba"))
 EXPERIMENTS_DIR = WORKSPACE / "experiments"
 
 

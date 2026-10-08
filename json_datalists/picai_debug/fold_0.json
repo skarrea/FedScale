@@ -1,0 +1,607 @@
+{
+  "training": [
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10002_1000002_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10002_1000002_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10002_1000002_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10002_1000002.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10002_1000002.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10004_1000004_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10004_1000004_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10004_1000004_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10004_1000004.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10004_1000004.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10005_1000005_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10005_1000005_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10005_1000005_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10005_1000005.nii.gz",
+      "case_pca": 1,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10005_1000005.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10007_1000007_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10007_1000007_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10007_1000007_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10007_1000007.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10007_1000007.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10008_1000008_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10008_1000008_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10008_1000008_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10008_1000008.nii.gz",
+      "case_pca": 1,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10008_1000008.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10009_1000009_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10009_1000009_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10009_1000009_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10009_1000009.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10009_1000009.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10010_1000010_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10010_1000010_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10010_1000010_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10010_1000010.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10010_1000010.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10011_1000011_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10011_1000011_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10011_1000011_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10011_1000011.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10011_1000011.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10012_1000012_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10012_1000012_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10012_1000012_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10012_1000012.nii.gz",
+      "case_pca": 1,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10012_1000012.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10013_1000013_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10013_1000013_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10013_1000013_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10013_1000013.nii.gz",
+      "case_pca": 1,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10013_1000013.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10014_1000014_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10014_1000014_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10014_1000014_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10014_1000014.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10014_1000014.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10015_1000015_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10015_1000015_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10015_1000015_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10015_1000015.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10015_1000015.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10016_1000016_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10016_1000016_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10016_1000016_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10016_1000016.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10016_1000016.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10018_1000018_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10018_1000018_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10018_1000018_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10018_1000018.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10018_1000018.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10019_1000019_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10019_1000019_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10019_1000019_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10019_1000019.nii.gz",
+      "case_pca": 1,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10019_1000019.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10021_1000021_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10021_1000021_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10021_1000021_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10021_1000021.nii.gz",
+      "case_pca": 1,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10021_1000021.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10024_1000024_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10024_1000024_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10024_1000024_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10024_1000024.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10024_1000024.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10025_1000025_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10025_1000025_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10025_1000025_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10025_1000025.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10025_1000025.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10026_1000026_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10026_1000026_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10026_1000026_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10026_1000026.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10026_1000026.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10028_1000028_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10028_1000028_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10028_1000028_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10028_1000028.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10028_1000028.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10030_1000030_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10030_1000030_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10030_1000030_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10030_1000030.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10030_1000030.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10031_1000031_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10031_1000031_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10031_1000031_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10031_1000031.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10031_1000031.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10034_1000034_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10034_1000034_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10034_1000034_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10034_1000034.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10034_1000034.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10036_1000036_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10036_1000036_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10036_1000036_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10036_1000036.nii.gz",
+      "case_pca": 1,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10036_1000036.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10037_1000037_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10037_1000037_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10037_1000037_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10037_1000037.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10037_1000037.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10039_1000039_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10039_1000039_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10039_1000039_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10039_1000039.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10039_1000039.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10042_1000042_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10042_1000042_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10042_1000042_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10042_1000042.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10042_1000042.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10043_1000043_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10043_1000043_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10043_1000043_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10043_1000043.nii.gz",
+      "case_pca": 1,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10043_1000043.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10044_1000044_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10044_1000044_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10044_1000044_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10044_1000044.nii.gz",
+      "case_pca": 1,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10044_1000044.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10046_1000046_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10046_1000046_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10046_1000046_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10046_1000046.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10046_1000046.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10047_1000047_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10047_1000047_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10047_1000047_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10047_1000047.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10047_1000047.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10048_1000048_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10048_1000048_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10048_1000048_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10048_1000048.nii.gz",
+      "case_pca": 1,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10048_1000048.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10049_1000049_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10049_1000049_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10049_1000049_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10049_1000049.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10049_1000049.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10050_1000050_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10050_1000050_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10050_1000050_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10050_1000050.nii.gz",
+      "case_pca": 1,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10050_1000050.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10051_1000051_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10051_1000051_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10051_1000051_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10051_1000051.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10051_1000051.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10052_1000052_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10052_1000052_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10052_1000052_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10052_1000052.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10052_1000052.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10053_1000053_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10053_1000053_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10053_1000053_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10053_1000053.nii.gz",
+      "case_pca": 1,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10053_1000053.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10054_1000054_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10054_1000054_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10054_1000054_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10054_1000054.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10054_1000054.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10055_1000055_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10055_1000055_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10055_1000055_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10055_1000055.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10055_1000055.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10056_1000056_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10056_1000056_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10056_1000056_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10056_1000056.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10056_1000056.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10057_1000057_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10057_1000057_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10057_1000057_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10057_1000057.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10057_1000057.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10058_1000058_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10058_1000058_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10058_1000058_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10058_1000058.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10058_1000058.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10060_1000060_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10060_1000060_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10060_1000060_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10060_1000060.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10060_1000060.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10061_1000061_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10061_1000061_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10061_1000061_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10061_1000061.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10061_1000061.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10063_1000063_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10063_1000063_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10063_1000063_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10063_1000063.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10063_1000063.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10064_1000064_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10064_1000064_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10064_1000064_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10064_1000064.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10064_1000064.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10066_1000066_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10066_1000066_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10066_1000066_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10066_1000066.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10066_1000066.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10067_1000067_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10067_1000067_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10067_1000067_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10067_1000067.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10067_1000067.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10068_1000068_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10068_1000068_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10068_1000068_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10068_1000068.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10068_1000068.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10069_1000069_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10069_1000069_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10069_1000069_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10069_1000069.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10069_1000069.nii.gz"
+    }
+  ],
+  "validation": [
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10000_1000000_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10000_1000000_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10000_1000000_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10000_1000000.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10000_1000000.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10001_1000001_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10001_1000001_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10001_1000001_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10001_1000001.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10001_1000001.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10003_1000003_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10003_1000003_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10003_1000003_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10003_1000003.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10003_1000003.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10006_1000006_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10006_1000006_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10006_1000006_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10006_1000006.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10006_1000006.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10017_1000017_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10017_1000017_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10017_1000017_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10017_1000017.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10017_1000017.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10020_1000020_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10020_1000020_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10020_1000020_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10020_1000020.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10020_1000020.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10022_1000022_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10022_1000022_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10022_1000022_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10022_1000022.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10022_1000022.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10023_1000023_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10023_1000023_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10023_1000023_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10023_1000023.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10023_1000023.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10027_1000027_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10027_1000027_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10027_1000027_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10027_1000027.nii.gz",
+      "case_pca": 0,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10027_1000027.nii.gz"
+    },
+    {
+      "image": [
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10029_1000029_0000.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10029_1000029_0001.nii.gz",
+        "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/imagesTr/10029_1000029_0002.nii.gz"
+      ],
+      "pca": "/data/PI-CAI/nnUNet_raw_data/Task2203_picai_baseline/labelsTr/10029_1000029.nii.gz",
+      "case_pca": 1,
+      "prostate": "/data/PI-CAI/picai_labels/anatomical_delineations/whole_gland/AI/Bosma22b/10029_1000029.nii.gz"
+    }
+  ],
+  "test": []
+}
