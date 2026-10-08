@@ -145,6 +145,74 @@ The repository expects the datasets to be located in ``data/``. The datasets (ex
 You can either make your own json datalists or use the existing lists in ``json_datalists/{dataset_id}/``.
 Instructions for PI-CAI training set download and preprossessing can be seen in ``data/PI-CAI-V2.0/readme.md``.
 
+### Create datalists from splits
+
+`shared_modules.datalists` provides `load_case_info`, `create_datalists`, and
+`write_datalists` using only Python's standard library. The splits JSON is an
+array of folds, each containing `train` and `val` lists:
+
+```json
+[
+    {"train": ["10000_1000000"], "val": ["10001_1000001"]},
+    {"train": ["10001_1000001"], "val": ["10000_1000000"]}
+]
+```
+
+Identifiers can also be patient IDs, such as `"10000"` or `10000`; these expand
+to all studies belonging to that patient in the CSV. CSV columns `patient_id`
+and `study_id` are required. Optional `case_csPCa` values `YES`/`NO` are exported
+as `case_pca` values 1/0. Other clinical CSV fields are not exported. IDs retain
+leading zeros when provided as strings. Unknown IDs, duplicate cases, and
+patients appearing in both training and validation within a fold are rejected.
+
+Run from the repository root:
+
+```bash
+python -m shared_modules.datalists \
+    --splits /path/to/splits.json \
+    --cases-csv /path/to/cases.csv \
+    --images-dir MyDataset/imagesTR \
+    --labels-dir MyDataset/labelsTr \
+    --output-dir json_datalists/MyDataset
+```
+
+This writes `fold_0.json`, `fold_1.json`, etc., replacing existing files with
+those names. Each contains `training`, `validation`, and an empty `test` list.
+Patient entries contain `image` (three paths), `pca`, and `case_pca` if available.
+Images are named `{patient_id}_{study_id}_0000.nii.gz`, `_0001.nii.gz`, and
+`_0002.nii.gz`, in T2W, ADC, HBV order. Labels are named
+`{patient_id}_{study_id}.nii.gz`. Use `--sequence-ids` to change sequence numbers
+while preserving that channel order. Directory spelling and case are preserved.
+
+Paths are stored as supplied. Relative image and mask directories should be
+relative to the training config's `data.data_dir`, not the output JSON directory.
+Use `--check-files --data-dir /path/to/data` to verify all referenced files.
+Negative cases still require an existing empty cancer-label file; the utility
+does not generate masks.
+
+For prostate-based cropping, add `--prostate-pred-dir MyDataset/prostate_preds`.
+Prediction filenames default to `{patient_id}_{study_id}_pred.nii.gz`; use
+`--prostate-pred-suffix ''` for `{patient_id}_{study_id}.nii.gz` instead.
+For MTL, also add `--zones-dir MyDataset/zones`, whose mask filenames are
+`{patient_id}_{study_id}.nii.gz`.
+
+Without prostate predictions, set `transforms.crop_key: null` and remove
+`prostate_pred` from `transforms.label_keys`. For non-MTL use `label_keys: ["pca"]`;
+for MTL use `label_keys: ["pca", "zones"]` and provide `--zones-dir`.
+
+The same functions can be called from Python:
+
+```python
+from shared_modules.datalists import create_datalists, write_datalists
+
+datalists = create_datalists(
+    "splits.json", "cases.csv", "MyDataset/imagesTR", "MyDataset/labelsTr",
+    # zones_dir="MyDataset/zones",  # required for MTL
+    # prostate_pred_dir="MyDataset/prostate_preds",  # for prostate-based cropping
+)
+write_datalists(datalists, "json_datalists/MyDataset")
+```
+
 
 ## Local training and testing
 
@@ -228,6 +296,9 @@ note={under review}
 ## Acknowledgements
 
 We acknowledge the authors of the publicly available datasets used in this study, whose contributions enable valuable research. Additionally, we extend our gratitude to the developers of [Swin UNETR](https://github.com/Project-MONAI/MONAI/blob/46a5272196a6c2590ca2589029eed8e4d56ff008/monai/networks/nets/swin_unetr.py#L47-L337), [U-Mamba](https://github.com/MIC-DKFZ/nnUNet), and the PI-CAI baseline models: [nnU-Net](https://github.com/DIAGNijmegen/picai_nnunet_semi_supervised_gc_algorithm), [U-Net](https://github.com/DIAGNijmegen/picai_unet_semi_supervised_gc_algorithm), and [nnDetection](https://github.com/DIAGNijmegen/picai_nndetection_semi_supervised_gc_algorithm) for making their valuable code publicly available.
+
+
+
 
 
 
