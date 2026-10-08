@@ -86,6 +86,7 @@ class LitModel(pl.LightningModule):
 
 if __name__ == "__main__":
     config = load_config()
+    pl.seed_everything(config.get("seed", 0), workers=True)
 
     data_module = DataModule(
         config,

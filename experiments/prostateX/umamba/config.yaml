@@ -31,7 +31,7 @@ logger:
 
 data:
   dataset_name: prostateX
-  json_list: ../../json_datalists/prostateX/prostateX.json
+  json_list: ../../../json_datalists/prostateX/prostateX.json
   data_dir: ../../../data
 
 

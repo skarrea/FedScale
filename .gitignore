@@ -1,12 +1,19 @@
 *.DS_Store
 **/__pycache__/
+**/*.egg-info/
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 **/trained_models/
+training_runs/
 **/shared_modules.egg-info/
 **/wandb/
 **/prob_map/
 **/backup/
 **/docker_inference/
 Dockerfile
+!gc_algorithms/base_container/Dockerfile
 *.tar.gz
 *.ckpt
 
