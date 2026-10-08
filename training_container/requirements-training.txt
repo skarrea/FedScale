@@ -9,3 +9,5 @@ picai-baseline==0.8.5
 picai-prep==2.1.13
 report-guided-annotation==0.3.4
 PyYAML>=6.0,<7
+ipywidgets
+scikit-learn==1.6.1
