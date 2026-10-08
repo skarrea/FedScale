@@ -1,0 +1,6 @@
+models/*/weights/
+output/
+test/
+*.tar.gz
+__pycache__/
+**/__pycache__/

@@ -12,6 +12,103 @@ Prostate cancer (PCa) remains a leading cause of cancer-related morbidity, empha
 
 
 ## How to install:
+
+### Local development (uv)
+
+The locked local environment can be created with:
+
+```bash
+uv sync
+source .venv/bin/activate
+python -c "import torch, monai; print(torch.__version__, monai.__version__)"
+```
+
+Python 3.10 is selected by ``.python-version``. The project is installed in editable
+mode, so ``shared_modules`` can be imported when a trainer is launched from an
+experiment directory.
+
+U-Mamba itself depends on ``mamba-ssm`` and ``causal-conv1d``. Those packages require
+Linux and an NVIDIA CUDA toolchain and are intentionally not part of the macOS lockfile.
+On a CUDA machine, use the original Conda environment below. The trainer scripts are
+also configured with ``accelerator="gpu"`` and therefore do not run on Apple Silicon.
+
+### Verify mamba-ssm in the Docker image
+
+On a Linux host with an NVIDIA GPU and the NVIDIA Container Toolkit, run:
+
+```bash
+cd gc_algorithms/base_container
+./test_mamba.sh
+```
+
+The test uses synthetic data and does not require model weights. It runs a small
+Mamba layer on CUDA, checks its output, and performs a backward pass to verify the
+compiled GPU kernels and gradients. To test a differently named image, pass its tag:
+
+```bash
+./test_mamba.sh my-image:tag
+```
+
+### Train with controlled amounts of data
+
+The dedicated training image keeps datasets and results outside the container. Build
+it once:
+
+```bash
+cd training_container
+./build.sh
+```
+
+To move it to another machine, export and load it with:
+
+```bash
+./export.sh
+# Copy fedscale-umamba-trainer.tar.gz to the Linux host, then:
+docker load < fedscale-umamba-trainer.tar.gz
+```
+
+Then launch an experiment on a Linux host with an NVIDIA GPU:
+
+```bash
+DATA_DIR=/absolute/path/to/data \
+OUTPUT_DIR=/absolute/path/to/training-runs \
+./train.sh \
+  --experiment picai/umamba_mtl \
+  --fraction 0.25 \
+  --seed 42 \
+  --run-name umamba-mtl-25pct-seed42 \
+  --gpus 0 \
+  --max-epochs 200
+```
+
+`DATA_DIR` must have the directory structure referenced by the selected JSON
+datalist. It is mounted read-only at `/data`. Checkpoints, the exact sampled
+datalist, the generated runtime config, and a run summary are saved below
+`OUTPUT_DIR/<run-name>/`.
+
+Only the training split is subsampled. Validation and test splits remain unchanged.
+Sampling is deterministic for a given seed and is stratified by `case_pca` when that
+field is available. Use `--fraction 1.0` for the complete training split or
+`--stratify-key none` to disable stratification.
+
+Weights & Biases is disabled by default. Add `--wandb` and export `WANDB_API_KEY` to
+enable it. Useful validation commands are:
+
+```bash
+# Verify CUDA and mamba-ssm without starting training
+DATA_DIR=/absolute/path/to/data ./train.sh --smoke-test
+
+# Generate and inspect the sampled datalist/config without starting training
+DATA_DIR=/absolute/path/to/data ./train.sh \
+  --fraction 0.10 --seed 42 --run-name inspect-10pct --prepare-only
+```
+
+Run `./train.sh --help` (with `DATA_DIR` set) for all available overrides. The
+supported experiment names are the directory paths below `experiments/`, such as
+`picai/umamba`, `picai/umamba_mtl`, and `prostateX/umamba`.
+
+### Linux with NVIDIA CUDA (full U-Mamba training)
+
 ```
 conda env create --file=environment.yml
 conda activate umamba_mtl
@@ -131,10 +228,6 @@ note={under review}
 ## Acknowledgements
 
 We acknowledge the authors of the publicly available datasets used in this study, whose contributions enable valuable research. Additionally, we extend our gratitude to the developers of [Swin UNETR](https://github.com/Project-MONAI/MONAI/blob/46a5272196a6c2590ca2589029eed8e4d56ff008/monai/networks/nets/swin_unetr.py#L47-L337), [U-Mamba](https://github.com/MIC-DKFZ/nnUNet), and the PI-CAI baseline models: [nnU-Net](https://github.com/DIAGNijmegen/picai_nnunet_semi_supervised_gc_algorithm), [U-Net](https://github.com/DIAGNijmegen/picai_unet_semi_supervised_gc_algorithm), and [nnDetection](https://github.com/DIAGNijmegen/picai_nndetection_semi_supervised_gc_algorithm) for making their valuable code publicly available.
-
-
-
-
 
 
 
