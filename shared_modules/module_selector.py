@@ -10,6 +10,7 @@ from pytorch_lightning.callbacks import (
     ModelCheckpoint,
     LearningRateMonitor,
 )
+from shared_modules.progress import CasesPerSecondProgressBar
 
 def get_network(config):
     if config.network.name == "SwinUNETR":
@@ -103,6 +104,7 @@ def get_logger(config):
 
 def get_callbacks(config, logger):
         callbacks = [
+            CasesPerSecondProgressBar(),
             EarlyStopping(monitor=f"val/{config.logger.metrics[0]}", mode="max", patience=config.early_stopping_patience, verbose=True),
             LearningRateMonitor(logging_interval="epoch"),
         ]

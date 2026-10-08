@@ -86,6 +86,14 @@ datalist. It is mounted read-only at `/data`. Checkpoints, the exact sampled
 datalist, the generated runtime config, and a run summary are saved below
 `OUTPUT_DIR/<run-name>/`.
 
+The training progress bar displays `cases/s`, the average number of training
+cases processed per second during the current epoch. It counts actual batch
+sizes, including the final partial batch, and includes time spent loading and
+augmenting batches. Setup/cache construction and validation pauses are excluded.
+For distributed GPU training, `cases/s/GPU` reports the displayed rank's local
+throughput rather than an extrapolated total across GPUs. The rate resets each
+epoch and does not introduce additional CUDA synchronization or collectives.
+
 Only the training split is subsampled. Validation and test splits remain unchanged.
 Sampling is deterministic for a given seed and is stratified by `case_pca` when that
 field is available. Use `--fraction 1.0` for the complete training split or
