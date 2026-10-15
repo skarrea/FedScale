@@ -31,23 +31,28 @@ class DataModule(pl.LightningDataModule):
         for split in splits:
             datalist = self.get_datalist(split)
             self.transforms[split] = self.get_transforms(split) # transform objects are saved for inverse transforms
+            # self.ds[split] = data.CacheDataset(
+            #     data=datalist,
+            #     transform=self.transforms[split],
+            #     cache_rate=self.config.cache_rate,# if split in ["validation", "test"] else 0,
+            #     num_workers=self.num_workers,
+            # )
 
-            self.ds[split] = data.CacheDataset(
+            self.ds[split] = data.PersistentDataset(
                 data=datalist,
                 transform=self.transforms[split],
-                cache_rate=self.config.cache_rate,# if split in ["validation", "test"] else 0,
-                num_workers=self.num_workers,
+                cache_dir='/workspace/FedScal-UMamba/cache',
             )
 
     def train_dataloader(self):
-        return DataLoader(self.ds["training"], batch_size=self.batch_size, pin_memory=True, shuffle=True, num_workers=4,
-            persistent_workers=True, prefetch_factor=2)
+        return DataLoader(self.ds["training"], batch_size=self.batch_size, pin_memory=False, shuffle=True, num_workers=14,
+            persistent_workers=False, prefetch_factor=8)
 
     def val_dataloader(self):
-        return DataLoader(self.ds["validation"], batch_size=1, pin_memory=True)
+        return DataLoader(self.ds["validation"], batch_size=1, pin_memory=False, num_workers=14, prefetch_factor=16)
 
     def test_dataloader(self):
-        return DataLoader(self.ds["test"], batch_size=1, pin_memory=True)
+        return DataLoader(self.ds["test"], batch_size=1, pin_memory=False, num_workers=14, prefetch_factor=16)
     
         
     def get_shared_transforms(self):
